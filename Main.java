@@ -4,7 +4,10 @@ public class Main {
   public static void main(String[] args){
     Patient[] patients = {
     new Patient("29284", "Pie", 182.8, 88.5),
-    new Patient("32567", "Pat", 161.5, 46.2)
+    new Patient("82152", "Mark", 181.4, 78.2),
+    new Patient("49462", "James", 178.5, 69.0),
+    new Patient("32567", "Pat", 161.5, 46.2),
+    new Patient("71951", "Chris", 179.9, 74.3)
     };
 
     System.out.println("============ Patient Data =============");
