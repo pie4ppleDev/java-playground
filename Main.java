@@ -1,24 +1,27 @@
-
 import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args){
-    Patient patient = new Patient("29284", "Pie", 182.8, 88.5);
-    Patient patient2 = new Patient("32567", "Pat", 161.5, 46.2);
+    Patient[] patients = {
+    new Patient("29284", "Pie", 182.8, 88.5),
+    new Patient("32567", "Pat", 161.5, 46.2)
+    };
 
     System.out.println("============ Patient Data =============");
-    System.out.println(patient);
-    System.out.println(patient2);
+    for (Patient p : patients) {
+      System.out.println(p);
+    }
     System.out.println("=======================================");
     Scanner inputId = new Scanner(System.in);
     System.out.print("Enter Patient Id: ");
     String pid = inputId.nextLine();
 
     Patient selectedPatient = null;
-    if (patient.getPatientId().equals(pid)) {
-        selectedPatient = patient;
-    } else if (patient2.getPatientId().equals(pid)) {
-        selectedPatient = patient2;
+    for (Patient p : patients) {
+      if (p.getPatientId().equals(pid)) {
+        selectedPatient = p;
+        break;
+      }
     }
 
     if (selectedPatient != null) {
